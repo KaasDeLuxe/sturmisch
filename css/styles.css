@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap");
 
 :root {
   /* Colors */
@@ -11,6 +11,10 @@
   --color-cashmere-blue: #a5b8d0;
   --color-monument: #84898c;
 
+  /* Fonts */
+  --font-lato: "Lato", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+
   /* Widths */
   --width-max-content: 1040px;
 
@@ -20,50 +24,125 @@
   /* Margins */
 
   /* Paddings */
-  --padding-body-s: 0 24px;
-  --padding-body-l: 0 40px;
+  --padding-s: 24px;
+  --padding-l: 40px;
+
+  /* Breakpoints */
+  --breakpoint-m: 768px;
+  --breakpoint-s: 1080px;
 }
 
 html {
   overflow-x: hidden;
+  animation: fadein 2s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 body {
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: var(--font-lato);
 }
 
 h1 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-playfair);
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 64px;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 24px;
 }
 
-button {
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 40px;
+    line-height: 52px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  h1 {
+    font-size: 48px;
+    line-height: 64px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Buttons */
+
+.button {
   height: 48px;
   border-radius: 24px;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
   padding: 0 24px;
   border: 2px solid;
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
+  font-family: var(--font-lato);
+  font-weight: 600;
   font-size: 16px;
   line-height: 32px;
   text-align: center;
+  text-decoration: none;
   transition: all 0.2s cubic-bezier(0.2, 0.5, 0.3, 1);
+}
+
+.button-blue {
+  background: var(--color-classic-blue);
+  border-color: var(--color-classic-blue);
+  color: #fff;
+}
+.button-blue:hover,
+.button-white:hover {
+  background: var(--color-coralessence);
+  border-color: var(--color-coralessence);
+  color: #fff;
+}
+
+.button-white {
+  background: #fff;
+  border-color: #fff;
+  color: var(--color-classic-blue);
+}
+
+.button-white-outline {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.button-white-outline:hover {
+  background: transparent;
+  border-color: var(--color-coralessence);
+  color: var(--color-coralessence);
+}
+
+.button-group .button {
+  margin-right: 16px;
+}
+
+.button-group .button:last-child {
+  margin-right: 0;
 }
 
 /* Main Navigation */
 
 nav.main-nav {
   display: flex;
-  padding: 40px;
+  padding: 24px;
   justify-content: space-between;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
-  width: calc(100vw - 80px);
+  width: calc(100vw - 48px);
 }
 
 nav a.logo svg {
@@ -90,7 +169,7 @@ nav ul li.nav-link:last-child {
 }
 
 nav ul li.nav-link a {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-playfair);
   text-decoration: none;
   font-style: normal;
   font-weight: 700;
@@ -110,11 +189,10 @@ nav ul li.nav-link a::after {
   width: 100%;
   bottom: 0;
   left: 0;
-  transition: all 0.2s cubic-bezier(0.2, 0.5, 0.3, 1);
+  transition: all 0.1s cubic-bezier(0.2, 0.5, 0.3, 1);
 }
 
 nav ul li.nav-link a:hover::after {
-  background: var(--color-classic-blue);
   width: 50%;
   left: 50%;
 }
@@ -127,22 +205,16 @@ nav ul li.nav-link form {
   display: inline;
 }
 
-nav ul li.nav-link button {
-  background: var(--color-classic-blue);
-  border-color: var(--color-classic-blue);
-  color: #fff;
-}
-
-nav ul li.nav-link button {
-  background: var(--color-classic-blue);
-  border-color: var(--color-classic-blue);
-  color: #fff;
-}
-
-nav ul li.nav-link button:hover {
-  background: #fff;
-  border-color: var(--color-classic-blue);
-  color: var(--color-classic-blue);
+@media screen and (min-width: 1080px) {
+  nav.main-nav {
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 80px);
+  }
 }
 
 /* Hero header */
@@ -150,12 +222,10 @@ nav ul li.nav-link button:hover {
 header.hero {
   position: relative;
   background: var(--color-classic-blue);
-  height: 100vh;
   min-height: var(--height-section-min);
-  margin-top: 128px;
+  margin-top: 96px;
   color: #fff;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -183,5 +253,87 @@ header.hero::before {
 
 header section.hero-content {
   max-width: var(--width-max-content);
-  padding: var(--padding-body-s);
+  width: 100%;
+  padding: 0 var(--padding-s);
+  margin: 120px auto;
+}
+
+header section.hero-content p.hero-hi {
+  font-family: var(--font-lato);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+a.hero-hi-link {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+a.hero-hi-link::after {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: var(--color-coralessence);
+  width: 100%;
+  bottom: -2px;
+  left: 0;
+  transition: all 0.1s cubic-bezier(0.2, 0.5, 0.3, 1);
+}
+
+section.hero-content h1 {
+  margin-top: 0;
+}
+
+p.hero-current {
+  font-family: var(--font-lato);
+  color: var(--color-cashmere-blue);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  header section.hero-content {
+    padding: 0 var(--padding-l);
+    margin: 160px auto;
+  }
+
+  header section.hero-content p.hero-hi {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  p.hero-current {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  header.hero {
+    margin-top: 128px;
+  }
+  header section.hero-content {
+    padding: 0 var(--padding-l);
+    margin: 216px auto;
+  }
+
+  header section.hero-content p.hero-hi {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  p.hero-current {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
 }
