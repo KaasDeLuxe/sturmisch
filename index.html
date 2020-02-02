@@ -34,7 +34,7 @@
       </a>
       <ul class="nav-links">
         <li class="nav-link">
-          <a href="index.html#work">Work</a>
+          <a href="#work">Work</a>
         </li>
         <li class="nav-link">
           <a href="about.html">About</a>
@@ -61,7 +61,7 @@
         </p>
         <div class="button-group">
           <a href="" class="button button-blue">Get in touch</a>
-          <a href="" class="button button-blue-outline">See my work</a>
+          <a href="#work" class="button button-blue-outline">See my work</a>
         </div>
       </section>
       <svg
@@ -76,6 +76,86 @@
       </svg>
     </header>
 
+    <main id="work" class="work">
+      <h2 class="section-header">A selection of projects</h2>
+      <section class="cases">
+        <article class="case">
+          <figure>
+            <img
+              alt="Finding a more efficient way to manage survey participants"
+              src="assets/img/effectory-participants-exchange.png"
+            />
+          </figure>
+          <header>
+            <h3>Effectory</h3>
+            <h2>Finding a more efficient way to manage survey participants</h2>
+          </header>
+        </article>
+
+        <article class="case">
+          <figure>
+            <img
+              alt="A new online strategy for Netherlands’ largest broadcasting association"
+              src="assets/img/bnnvara-online-strategy.png"
+            />
+          </figure>
+          <header>
+            <h3>BNNVARA</h3>
+            <h2>
+              A new online strategy for Netherlands’ largest broadcasting
+              association
+            </h2>
+          </header>
+        </article>
+
+        <article class="case">
+          <figure>
+            <img
+              alt="Pressure cooking an app to encourage young people to vote"
+              src="assets/img/bnnvara-boos-polertiek.png"
+            />
+          </figure>
+          <header>
+            <h3>BNNVARA</h3>
+            <h2>
+              Pressure cooking an app to encourage young people to vote
+            </h2>
+          </header>
+        </article>
+      </section>
+
+      <section class="extra-work"></section>
+    </main>
+
     <script src="js/scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Add smooth scrolling to all links
+        $("a").on("click", function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top
+              },
+              800,
+              function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
   </body>
 </html>
