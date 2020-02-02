@@ -1,2 +1,0 @@
-# sturmisch
-Created with CodeSandbox
