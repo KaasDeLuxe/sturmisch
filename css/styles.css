@@ -359,7 +359,7 @@ p.hero-current {
 
 @media screen and (min-width: 1080px) {
   header.hero {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 160px);
   }
   header section.hero-content p.hero-hi {
     font-size: 24px;
