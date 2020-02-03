@@ -13,6 +13,7 @@
     />
     <meta name="author" content="Martijn van der Wardt" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
@@ -34,14 +35,18 @@
       </a>
       <ul class="nav-links">
         <li class="nav-link">
-          <a href="index.html#work">Work</a>
+          <a href="#work">Work</a>
         </li>
         <li class="nav-link">
           <a href="about.html">About</a>
         </li>
-        <li class="nav-link">
-          <form action="mailto:martijn@sturmisch.nl" method="GET">
-            <button type="submit">Contact</button>
+        <li class="nav-link nav-mailto">
+          <form
+            class="inline-form"
+            action="mailto:martijn@sturmisch.nl"
+            method="GET"
+          >
+            <button class="button button-blue" type="submit">Contact</button>
           </form>
         </li>
       </ul>
@@ -49,13 +54,238 @@
 
     <header class="hero">
       <section class="hero-content">
+        <p class="hero-hi">
+          Hi, my name is <a class="hero-hi-link" href="about.html">Martijn</a>
+        </p>
         <h1>
           I’m committed to making digital products, services and experiences a
           little more enjoyable
         </h1>
+        <p class="hero-current">
+          Currently working as product designer at Effectory
+        </p>
+        <div class="button-group">
+          <form
+            class="inline-form"
+            action="mailto:martijn@sturmisch.nl"
+            method="GET"
+          >
+            <button class="button button-blue" type="submit">Contact</button>
+          </form>
+          <a href="#work" class="button button-blue-outline">See my work</a>
+        </div>
       </section>
+      <svg
+        viewBox="0 0 1920 240"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1920 240V0C1920 0 1584.5 64 960 64C335.5 64 0 0 0 0V240C0 240 335.5 224 960 224C1584.5 224 1920 240 1920 240Z"
+          fill="#0F4C81"
+        />
+      </svg>
     </header>
 
-    <script src="js/scripts.js"></script>
+    <main id="work" class="work">
+      <section class="cases">
+        <h2 class="section-header">A selection of projects</h2>
+
+        <a href="#" class="article-anchor">
+          <article class="case">
+            <figure>
+              <img
+                alt="Finding a more efficient way to manage survey participants"
+                src="assets/img/effectory-participants-exchange.png"
+              />
+            </figure>
+            <header>
+              <h3>Effectory</h3>
+
+              <h2>
+                Finding a more efficient way to manage survey participants
+              </h2>
+              <section class="click-here">
+                <span>View case</span
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19"
+                    stroke="#363838"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 5L19 12L12 19"
+                    stroke="#363838"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </section>
+            </header>
+          </article>
+        </a>
+
+        <a href="#" class="article-anchor">
+          <article class="case">
+            <figure>
+              <img
+                alt="A new online strategy for Netherlands’ largest broadcasting association"
+                src="assets/img/bnnvara-online-strategy.png"
+              />
+            </figure>
+            <header>
+              <h3>BNNVARA</h3>
+              <h2>
+                A new online strategy for Netherlands’ largest broadcasting
+                association
+              </h2>
+              <section class="click-here">
+                <span>View case</span
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19"
+                    stroke="#363838"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 5L19 12L12 19"
+                    stroke="#363838"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </section>
+            </header>
+          </article>
+        </a>
+
+        <a href="#" class="article-anchor">
+          <article class="case">
+            <figure>
+              <img
+                alt="Pressure cooking an app to encourage young people to vote"
+                src="assets/img/bnnvara-boos-polertiek.png"
+              />
+            </figure>
+            <header>
+              <h3>BNNVARA</h3>
+              <h2>
+                Pressure cooking an app to encourage young people to vote
+              </h2>
+              <section class="click-here">
+                <span>View case</span
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19"
+                    stroke="#363838"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 5L19 12L12 19"
+                    stroke="#363838"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </section>
+            </header>
+          </article>
+        </a>
+      </section>
+    </main>
+
+    <aside class="other-work">
+      <section class="extra-mentions">
+        <h2 class="section-header">Other work</h2>
+        <section class="extra-mentions-articles">
+          <article>
+            <h3>Effectory</h3>
+            <p>
+              Providing teams and managers with more goal oriented survey by
+              creating actionable insights.
+            </p>
+          </article>
+          <article>
+            <h3>BNNVARA</h3>
+            <p>
+              Spuiten en Slikken App: Designing a game that’s fun and educates
+              people about sex and drugs.
+            </p>
+          </article>
+          <article>
+            <h3>Jarabee</h3>
+            <p>
+              Cocreation of a digital portfolio for young people in youth care
+              to help them share their story.
+            </p>
+          </article>
+        </section>
+      </section>
+    </aside>
+
+    <footer class="site-footer">
+      <section class="footer-title">
+        <p class="footer-title-display">
+          I like a good cup of coffee. Want to discuss your project? Need an
+          artisanal piece of furniture made? Want to go for a run?
+        </p>
+        <div class="button-group">
+          <form
+            class="inline-form"
+            action="mailto:martijn@sturmisch.nl"
+            method="GET"
+          >
+            <button class="button button-blue" type="submit">Contact</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="footer-links">
+        <div class="copyright-container">
+          <p>&copy; Martijn van der Wardt</p>
+        </div>
+        <div>
+          <ul class="nav-links">
+            <li class="nav-link">
+              <a href="https://www.linkedin.com/in/martijnvdwardt/">Linkedin</a>
+            </li>
+            <li class="nav-link">
+              <a href="https://www.strava.com/athletes/552506">Strava</a>
+            </li>
+          </ul>
+          <p>
+            martijn@sturmisch.nl<br />
+            Laren, The Netherlands
+          </p>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
