@@ -1,610 +1,291 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap");
-
-:root {
-  /* Colors */
-  --color-classic-blue: #0f4c81;
-  --color-pirate-black: #363838;
-  --color-coralessence: #f26b5b;
-  --color-coconut-milk: #f0ede5;
-  --color-lime-punch: #c0d725;
-  --color-cashmere-blue: #a5b8d0;
-  --color-monument: #84898c;
-
-  /* Fonts */
-  --font-lato: "Lato", sans-serif;
-  --font-playfair: "Playfair Display", serif;
-
-  /* Widths */
-  --width-max-content: 1040px;
-
-  /* Heights */
-  --height-section-min: 560px;
-
-  /* Margins */
-
-  /* Paddings */
-  --padding-s: 24px;
-  --padding-m: 40px;
-  --padding-l: 80px;
-
-  /* Breakpoints */
-  --breakpoint-m: 768px;
-  --breakpoint-s: 1080px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  overflow-x: hidden;
-  animation: fadein 2s;
-  scroll-behavior: smooth;
-  margin: 0;
-  width: 100vw;
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-lato);
-  color: var(--color-pirate-black);
-}
-
-h1 {
-  font-family: var(--font-playfair);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
-  margin-bottom: 24px;
-}
-
-h2.section-header {
-  font-family: var(--font-lato);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 10px;
-  line-height: 16px;
-  color: var(--color-pirate-black);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding-left: calc(24px + 16px);
-  position: relative;
-}
-
-h2.section-header::after {
-  display: block;
-  content: "";
-  position: absolute;
-  height: 1px;
-  background: var(--color-monument);
-  width: 24px;
-  bottom: 50%;
-  left: 0;
-}
-
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 40px;
-    line-height: 52px;
-    margin-bottom: 32px;
-  }
-}
-
-@media screen and (min-width: 1080px) {
-  h1 {
-    font-size: 48px;
-    line-height: 64px;
-    margin-bottom: 40px;
-  }
-  h2.section-header {
-    font-family: var(--font-lato);
-    font-size: 14px;
-    line-height: 24px;
-    padding-left: calc(40px + 16px);
-  }
-  h2.section-header::after {
-    width: 40px;
-  }
-}
-
-figure {
-  margin: 0;
-}
-
-/* Buttons */
-
-.button {
-  height: 48px;
-  border-radius: 24px;
-  display: inline-flex;
-  align-items: center;
-  padding: 0 24px;
-  border: 2px solid;
-  font-family: var(--font-lato);
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 32px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.2s cubic-bezier(0.2, 0.5, 0.3, 1);
-}
-
-.button-blue {
-  background: var(--color-classic-blue);
-  border-color: var(--color-classic-blue);
-  color: #fff;
-}
-.button-white {
-  background: #fff;
-  border-color: #fff;
-  color: var(--color-classic-blue);
-}
-.button-blue:hover,
-.button-white:hover {
-  background: var(--color-coralessence);
-  border-color: var(--color-coralessence);
-  color: #fff;
-}
-
-.button-blue-outline {
-  background: transparent;
-  border-color: var(--color-classic-blue);
-  color: var(--color-classic-blue);
-}
-.button-white-outline {
-  background: transparent;
-  border-color: #fff;
-  color: #fff;
-}
-.button-blue-outline:hover,
-.button-white-outline:hover {
-  background: transparent;
-  border-color: var(--color-coralessence);
-  color: var(--color-coralessence);
-}
-
-.button-group .button {
-  margin-right: 8px;
-}
-
-.button-group .button:last-child {
-  margin-right: 0;
-}
-
-.inline-form {
-  display: inline;
-}
-
-/* Main Navigation */
-
-nav.main-nav {
-  display: flex;
-  padding: var(--padding-s);
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 96px;
-  width: 100vw;
-}
-
-nav a.logo svg {
-  fill: #f26b5b;
-  height: 32px;
-}
-
-nav a.logo svg:hover {
-  fill: #0f4c81;
-}
-
-ul.nav-links {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-}
-
-ul li.nav-link {
-  display: inline;
-  margin-left: var(--padding-s);
-}
-
-ul li.nav-link:first-child {
-  margin-left: 0;
-}
-
-ul li.nav-link a {
-  font-family: var(--font-playfair);
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 32px;
-  display: inline-block;
-  color: var(--color-classic-blue);
-  position: relative;
-}
-
-ul li.nav-link a::after {
-  display: block;
-  content: "";
-  position: absolute;
-  height: 2px;
-  background: var(--color-coralessence);
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  transition: all 0.1s cubic-bezier(0.2, 0.5, 0.3, 1);
-}
-
-ul li.nav-link a:hover::after {
-  width: 50%;
-  left: 50%;
-}
-
-ul li.nav-link a:hover {
-  color: var(--color-coralessence);
-}
-
-ul li.nav-link form {
-  display: inline;
-}
-ul li.nav-link.nav-mailto {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  nav.main-nav {
-    padding: var(--padding-l);
-    height: auto;
-  }
-  ul li.nav-link {
-    margin-left: var(--padding-m);
-  }
-  ul li.nav-link.nav-mailto {
-    display: inline;
-  }
-}
-
-/* Hero header */
-
-header.hero {
-  position: relative;
-  background: #fff;
-  margin-top: 96px;
-  min-height: calc(100vh - 96px);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-}
-
-header section.hero-content {
-  max-width: var(--width-max-content);
-  width: 100%;
-  padding: 0 var(--padding-s);
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
-
-header section.hero-content p.hero-hi {
-  font-family: var(--font-playfair);
-  color: var(--color-coralessence);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 8px;
-}
-
-a.hero-hi-link {
-  color: var(--color-coralessence);
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
-}
-
-section.hero-content h1 {
-  margin-top: 0;
-  color: var(--color-classic-blue);
-}
-
-p.hero-current {
-  font-family: var(--font-lato);
-  color: var(--color-coralessence);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  margin-bottom: 40px;
-}
-
-.hero svg {
-  bottom: -16px;
-  width: 100vw;
-  position: absolute;
-}
-
-@media screen and (min-width: 768px) {
-  header.hero {
-    margin-top: 208px;
-  }
-  header section.hero-content {
-    padding: 0 var(--padding-l);
-    margin-top: 80px;
-  }
-  header section.hero-content p.hero-hi {
-    font-size: 20px;
-    line-height: 24px;
-  }
-  p.hero-current {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .hero svg {
-    bottom: -80px;
-    width: 100vw;
-    position: absolute;
-  }
-}
-
-@media screen and (min-width: 1080px) {
-  header section.hero-content {
-    padding: 0 var(--padding-l);
-    margin-top: 216px;
-  }
-
-  header section.hero-content p.hero-hi {
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-  p.hero-current {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 40px;
-  }
-  .hero svg {
-    bottom: -240px;
-    width: 100vw;
-    position: absolute;
-  }
-}
-
-/* Main */
-
-main.work {
-  margin: 16px auto 0 auto;
-  padding-top: 80px;
-  display: flex;
-  justify-content: center;
-}
-
-main.work section.cases {
-  max-width: var(--width-max-content);
-  padding: 0 var(--padding-s);
-  margin-top: 120px;
-  display: grid;
-  grid-row-gap: 120px;
-}
-
-article.case {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(272px, 400px));
-  grid-column-gap: 40px;
-}
-
-article.case header {
-  padding: 0;
-  padding-top: 40px;
-}
-
-article.case figure img {
-  width: 100%;
-}
-
-article.case header h2 {
-  font-family: var(--font-playfair);
-  font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 40px;
-  margin: 8px 0 40px 0;
-}
-
-article.case header h3 {
-  font-family: var(--font-lato);
-  font-style: normal;
-  font-weight: 700;
-  margin: 0;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-monument);
-}
-
-article.case section.click-here {
-  font-family: var(--font-lato);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 32px;
-  display: flex;
-  align-items: center;
-  transition: all 0.2s;
-}
-
-.article-anchor {
-  text-decoration: none;
-  color: initial;
-}
-.article-anchor:hover .click-here {
-  color: var(--color-coralessence);
-}
-.click-here svg {
-  transition: transform 0.2s;
-}
-.article-anchor:hover .click-here svg {
-  transform: translateX(8px);
-}
-.article-anchor:hover .click-here svg path {
-  stroke: var(--color-coralessence);
-}
-
-.click-here span {
-  margin-right: 8px;
-}
-
-@media screen and (min-width: 768px) {
-  main.work {
-    padding-top: 80px;
-    margin-top: 80px;
-  }
-  main.work section.cases {
-    padding: 0 var(--padding-l);
-  }
-
-  article.case {
-    display: grid;
-    grid-template-columns: minmax(33%, 1fr) minmax(120px, 320px);
-    grid-column-gap: 40px;
-  }
-
-  article.case header {
-    max-width: 320px;
-  }
-}
-
-@media screen and (min-width: 1080px) {
-  main.work {
-    padding-top: 160px;
-    margin-top: 240px;
-  }
-}
-
-/* Aside Extra Work */
-
-aside.other-work {
-  background: var(--color-classic-blue);
-  padding: 120px 0;
-  margin-top: 160px;
-  color: var(--color-cashmere-blue);
-  display: flex;
-  justify-content: center;
-}
-
-section.extra-mentions {
-  max-width: var(--width-max-content);
-  padding: 0 var(--padding-s);
-}
-
-aside.other-work h2.section-header {
-  color: #fff;
-}
-
-aside.other-workh2.section-header::after {
-  background: var(--color-cashmere-blue);
-}
-
-section.extra-mentions-articles {
-  display: block;
-}
-
-section.extra-mentions-articles h3 {
-  font-family: var(--font-lato);
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin: 80px 0 0 0;
-}
-
-section.extra-mentions-articles p {
-  font-family: var(--font-playfair);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 32px;
-  margin-top: 8px;
-}
-
-@media screen and (min-width: 768px) {
-  section.extra-mentions {
-    padding: 0 var(--padding-l);
-  }
-}
-
-@media screen and (min-width: 1080px) {
-  section.extra-mentions-articles {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(272px, 1fr));
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-  }
-}
-
-.footer-title,
-.footer-links {
-  max-width: var(--width-max-content);
-  padding: 0 var(--padding-s);
-  width: 100vw;
-  margin: 0 auto;
-}
-
-footer.site-footer {
-  margin-top: 160px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.footer-title {
-  margin-bottom: 160px;
-}
-
-.footer-title-display {
-  font-family: var(--font-playfair);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 40px;
-  margin: 0 0 40px 0;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: space-between;
-  color: var(--color-cashmere-blue);
-  font-family: var(--font-lato);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.copyright-container {
-  align-self: flex-end;
-}
-
-@media screen and (min-width: 768px) {
-  .footer-title,
-  .footer-links {
-    padding: 0 var(--padding-l);
-  }
-  .footer-title-display {
-    font-size: 48px;
-    line-height: 64px;
-  }
-}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>
+      Martijn van der Wardt - Digital Product Designer | St&uuml;rmisch
+    </title>
+    <meta
+      name="description"
+      content="Portfolio of Martijn van der Wardt. Experienced Digital Product Designer"
+    />
+    <meta name="author" content="Martijn van der Wardt" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="main-nav">
+      <a href="index.html" class="logo">
+        <svg
+          width="64"
+          height="40"
+          viewBox="0 0 64 40"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.80487 10.9087C7.80487 8.4285 10.6105 7.0144 12.5733 8.50524L16.1524 11.2238C16.9607 11.8377 17.8331 12.3224 18.7427 12.6778C18.7354 12.7761 18.7317 12.8753 18.7317 12.9755V29.0913C18.7317 38.0712 28.8898 43.1912 35.9965 37.7934L39.5756 35.0748C40.6359 34.2695 42.0958 34.2695 43.1561 35.0748L46.7352 37.7934C53.8418 43.1912 64 38.0712 64 29.0913V12.9755C64 10.7991 62.2528 9.03479 60.0976 9.03479C57.9423 9.03479 56.1951 10.7991 56.1951 12.9755L56.1951 29.0913C56.1951 31.5715 53.3895 32.9856 51.4267 31.4948L47.8476 28.7762C47.0393 28.1623 46.1669 27.6776 45.2573 27.3222C45.2646 27.224 45.2683 27.1247 45.2683 27.0245V10.9087C45.2683 1.92878 35.1101 -3.19123 28.0035 2.20665L24.4244 4.92516C23.3641 5.73047 21.9042 5.73047 20.8439 4.92516L17.2648 2.20664C10.1582 -3.19123 0 1.92878 0 10.9087V27.0245C0 29.2009 1.74718 30.9652 3.90244 30.9652C6.05769 30.9652 7.80487 29.2009 7.80487 27.0245V10.9087ZM37.4744 27.3222C37.4671 27.2239 37.4634 27.1246 37.4634 27.0245V10.9087C37.4634 8.42851 34.6579 7.0144 32.6951 8.50525L29.1159 11.2238C28.3076 11.8377 27.4352 12.3224 26.5256 12.6778C26.5329 12.7761 26.5366 12.8754 26.5366 12.9755V29.0913C26.5366 31.5715 29.3421 32.9856 31.3049 31.4948L34.8841 28.7762C35.6924 28.1623 36.5648 27.6776 37.4744 27.3222Z"
+          />
+        </svg>
+      </a>
+      <ul class="nav-links">
+        <li class="nav-link">
+          <a href="#work">Work</a>
+        </li>
+        <li class="nav-link">
+          <a href="about.html">About</a>
+        </li>
+        <li class="nav-link nav-mailto">
+          <form
+            class="inline-form"
+            action="mailto:martijn@sturmisch.nl"
+            method="GET"
+          >
+            <button class="button button-blue" type="submit">Contact</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
+
+    <header class="hero">
+      <section class="hero-content">
+        <p class="hero-hi">
+          Hi, my name is <a class="hero-hi-link" href="about.html">Martijn</a>
+        </p>
+        <h1>
+          I’m committed to making digital products, services and experiences a
+          little more enjoyable
+        </h1>
+        <p class="hero-current">
+          Currently working as product designer at Effectory
+        </p>
+        <div class="button-group">
+          <form
+            class="inline-form"
+            action="mailto:martijn@sturmisch.nl"
+            method="GET"
+          >
+            <button class="button button-blue" type="submit">Contact</button>
+          </form>
+          <a href="#work" class="button button-blue-outline">See my work</a>
+        </div>
+      </section>
+      <svg
+        viewBox="0 0 1920 240"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1920 240V0C1920 0 1584.5 64 960 64C335.5 64 0 0 0 0V240C0 240 335.5 224 960 224C1584.5 224 1920 240 1920 240Z"
+          fill="#0F4C81"
+        />
+      </svg>
+    </header>
+
+    <main id="work" class="work">
+      <section class="cases">
+        <h2 class="section-header">A selection of projects</h2>
+
+        <a href="#" class="article-anchor">
+          <article class="case">
+            <figure>
+              <img
+                alt="Finding a more efficient way to manage survey participants"
+                src="assets/img/effectory-participants-exchange.png"
+              />
+            </figure>
+            <header>
+              <h3>Effectory</h3>
+
+              <h2>
+                Finding a more efficient way to manage survey participants
+              </h2>
+              <section class="click-here">
+                <span>View case</span
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19"
+                    stroke="#363838"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 5L19 12L12 19"
+                    stroke="#363838"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </section>
+            </header>
+          </article>
+        </a>
+
+        <a href="#" class="article-anchor">
+          <article class="case">
+            <figure>
+              <img
+                alt="A new online strategy for Netherlands’ largest broadcasting association"
+                src="assets/img/bnnvara-online-strategy.png"
+              />
+            </figure>
+            <header>
+              <h3>BNNVARA</h3>
+              <h2>
+                A new online strategy for Netherlands’ largest broadcasting
+                association
+              </h2>
+              <section class="click-here">
+                <span>View case</span
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19"
+                    stroke="#363838"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 5L19 12L12 19"
+                    stroke="#363838"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </section>
+            </header>
+          </article>
+        </a>
+
+        <a href="#" class="article-anchor">
+          <article class="case">
+            <figure>
+              <img
+                alt="Pressure cooking an app to encourage young people to vote"
+                src="assets/img/bnnvara-boos-polertiek.png"
+              />
+            </figure>
+            <header>
+              <h3>BNNVARA</h3>
+              <h2>
+                Pressure cooking an app to encourage young people to vote
+              </h2>
+              <section class="click-here">
+                <span>View case</span
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19"
+                    stroke="#363838"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 5L19 12L12 19"
+                    stroke="#363838"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </section>
+            </header>
+          </article>
+        </a>
+      </section>
+    </main>
+
+    <aside class="other-work">
+      <section class="extra-mentions">
+        <h2 class="section-header">Other work</h2>
+        <section class="extra-mentions-articles">
+          <article>
+            <h3>Effectory</h3>
+            <p>
+              Providing teams and managers with more goal oriented survey by
+              creating actionable insights.
+            </p>
+          </article>
+          <article>
+            <h3>BNNVARA</h3>
+            <p>
+              Spuiten en Slikken App: Designing a game that’s fun and educates
+              people about sex and drugs.
+            </p>
+          </article>
+          <article>
+            <h3>Jarabee</h3>
+            <p>
+              Cocreation of a digital portfolio for young people in youth care
+              to help them share their story.
+            </p>
+          </article>
+        </section>
+      </section>
+    </aside>
+
+    <footer class="site-footer">
+      <section class="footer-title">
+        <p class="footer-title-display">
+          I like a good cup of coffee. Want to discuss your project? Need an
+          artisanal piece of furniture made? Want to go for a run?
+        </p>
+        <div class="button-group">
+          <form
+            class="inline-form"
+            action="mailto:martijn@sturmisch.nl"
+            method="GET"
+          >
+            <button class="button button-blue" type="submit">Contact</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="footer-links">
+        <div class="copyright-container">
+          <p>&copy; Martijn van der Wardt</p>
+        </div>
+        <div>
+          <ul class="nav-links">
+            <li class="nav-link">
+              <a href="https://www.linkedin.com/in/martijnvdwardt/">Linkedin</a>
+            </li>
+            <li class="nav-link">
+              <a href="https://www.strava.com/athletes/552506">Strava</a>
+            </li>
+          </ul>
+          <p>
+            martijn@sturmisch.nl<br />
+            Laren, The Netherlands
+          </p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
