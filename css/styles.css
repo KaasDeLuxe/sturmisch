@@ -282,6 +282,7 @@ header.hero {
   position: relative;
   display: flex;
   justify-content: center;
+
   height: calc(100vh - 16px);
   min-height: 520px;
   align-items: center;
