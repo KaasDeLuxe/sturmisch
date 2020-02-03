@@ -280,12 +280,11 @@ ul li.nav-link.nav-mailto {
 
 header.hero {
   position: relative;
-  background: #fff;
-  margin-top: 96px;
-  min-height: calc(100vh - 96px);
-  color: #fff;
   display: flex;
   justify-content: center;
+  height: 100vh;
+  min-height: 520px;
+  align-items: center;
 }
 
 header section.hero-content {
@@ -336,11 +335,10 @@ p.hero-current {
 
 @media screen and (min-width: 768px) {
   header.hero {
-    margin-top: 208px;
+    min-height: 720px;
   }
   header section.hero-content {
     padding: 0 var(--padding-l);
-    margin-top: 80px;
   }
   header section.hero-content p.hero-hi {
     font-size: 20px;
@@ -358,11 +356,6 @@ p.hero-current {
 }
 
 @media screen and (min-width: 1080px) {
-  header section.hero-content {
-    padding: 0 var(--padding-l);
-    margin-top: 216px;
-  }
-
   header section.hero-content p.hero-hi {
     font-size: 24px;
     line-height: 32px;
