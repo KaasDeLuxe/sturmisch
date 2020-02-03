@@ -282,7 +282,6 @@ header.hero {
   position: relative;
   display: flex;
   justify-content: center;
-
   height: calc(100vh - 16px);
   min-height: 520px;
   align-items: center;
@@ -359,7 +358,7 @@ p.hero-current {
 
 @media screen and (min-width: 1080px) {
   header.hero {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 80px);
   }
   header section.hero-content p.hero-hi {
     font-size: 24px;
@@ -371,7 +370,7 @@ p.hero-current {
     margin-bottom: 40px;
   }
   .hero svg {
-    bottom: -240px;
+    bottom: -160px;
     width: 100vw;
     position: absolute;
   }
