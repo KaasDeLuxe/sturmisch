@@ -41,6 +41,8 @@ html {
   overflow-x: hidden;
   animation: fadein 2s;
   scroll-behavior: smooth;
+  margin: 0;
+  width: 100vw;
 }
 @keyframes fadein {
   from {
@@ -66,6 +68,30 @@ h1 {
   margin-bottom: 24px;
 }
 
+h2.section-header {
+  font-family: var(--font-lato);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 16px;
+  color: var(--color-pirate-black);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-left: calc(24px + 16px);
+  position: relative;
+}
+
+h2.section-header::after {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: var(--color-monument);
+  width: 24px;
+  bottom: 50%;
+  left: 0;
+}
+
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 40px;
@@ -79,6 +105,15 @@ h1 {
     font-size: 48px;
     line-height: 64px;
     margin-bottom: 40px;
+  }
+  h2.section-header {
+    font-family: var(--font-lato);
+    font-size: 14px;
+    line-height: 24px;
+    padding-left: calc(40px + 16px);
+  }
+  h2.section-header::after {
+    width: 40px;
   }
 }
 
@@ -249,28 +284,6 @@ header.hero {
   justify-content: center;
 }
 
-/*
-header.hero:before {
-  content:'';
-  position: absolute;
-  top: -64px;
-  width: 100vw;
-  height: 64px;
-  border-radius: 50% 50% 0 0/64px 64px 0 0;
-  background: var(--color-classic-blue);
-  transform: scaleX(1.25);
-}
-
-header.hero::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  background: url(divider.svg);
-}
-*/
-
 header section.hero-content {
   max-width: var(--width-max-content);
   width: 100%;
@@ -366,36 +379,15 @@ p.hero-current {
 /* Main */
 
 main.work {
-  max-width: var(--width-max-content);
-  padding: 0 var(--padding-s);
   margin: 16px auto 0 auto;
   padding-top: 80px;
-}
-
-main.work h2.section-header {
-  font-family: var(--font-lato);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 10px;
-  line-height: 16px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding-left: calc(24px + 16px);
-  position: relative;
-}
-
-h2.section-header::after {
-  display: block;
-  content: "";
-  position: absolute;
-  height: 1px;
-  background: var(--color-monument);
-  width: 24px;
-  bottom: 50%;
-  left: 0;
+  display: flex;
+  justify-content: center;
 }
 
 main.work section.cases {
+  max-width: var(--width-max-content);
+  padding: 0 var(--padding-s);
   margin-top: 120px;
   display: grid;
   grid-row-gap: 120px;
@@ -403,24 +395,89 @@ main.work section.cases {
 
 article.case {
   display: grid;
-  grid-template-columns: minmax(33%, 1fr) minmax(120px, 320px);
+  grid-template-columns: repeat(auto-fit, minmax(272px, 400px));
   grid-column-gap: 40px;
 }
 
 article.case header {
-  max-width: 320px;
   padding: 0;
+  padding-top: 40px;
 }
 
 article.case figure img {
   width: 100%;
 }
 
+article.case header h2 {
+  font-family: var(--font-playfair);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  margin: 8px 0 40px 0;
+}
+
+article.case header h3 {
+  font-family: var(--font-lato);
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-monument);
+}
+
+article.case section.click-here {
+  font-family: var(--font-lato);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.article-anchor {
+  text-decoration: none;
+  color: initial;
+}
+.article-anchor:hover .click-here {
+  color: var(--color-coralessence);
+}
+.click-here svg {
+  transition: transform 0.2s;
+}
+.article-anchor:hover .click-here svg {
+  transform: translateX(8px);
+}
+.article-anchor:hover .click-here svg path {
+  stroke: var(--color-coralessence);
+}
+
+.click-here span {
+  margin-right: 8px;
+}
+
 @media screen and (min-width: 768px) {
   main.work {
-    padding: 0 var(--padding-l);
     padding-top: 80px;
     margin-top: 80px;
+  }
+  main.work section.cases {
+    padding: 0 var(--padding-l);
+  }
+
+  article.case {
+    display: grid;
+    grid-template-columns: minmax(33%, 1fr) minmax(120px, 320px);
+    grid-column-gap: 40px;
+  }
+
+  article.case header {
+    max-width: 320px;
   }
 }
 
@@ -429,13 +486,95 @@ article.case figure img {
     padding-top: 160px;
     margin-top: 240px;
   }
-  main.work h2.section-header {
-    font-family: var(--font-lato);
-    font-size: 14px;
-    line-height: 24px;
-    padding-left: calc(40px + 16px);
+}
+
+/* Aside Extra Work */
+
+aside.other-work {
+  background: var(--color-classic-blue);
+  padding: 120px 0;
+  margin-top: 160px;
+  color: var(--color-cashmere-blue);
+  display: flex;
+  justify-content: center;
+}
+
+section.extra-mentions {
+  max-width: var(--width-max-content);
+  padding: 0 var(--padding-s);
+}
+
+aside.other-work h2.section-header {
+  color: #fff;
+}
+
+aside.other-workh2.section-header::after {
+  background: var(--color-cashmere-blue);
+}
+
+section.extra-mentions-articles {
+  display: block;
+}
+
+section.extra-mentions-articles h3 {
+  font-family: var(--font-lato);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 80px 0 0 0;
+}
+
+section.extra-mentions-articles p {
+  font-family: var(--font-playfair);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  margin-top: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  section.extra-mentions {
+    padding: 0 var(--padding-l);
   }
-  h2.section-header::after {
-    width: 40px;
+}
+
+@media screen and (min-width: 1080px) {
+  section.extra-mentions-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+  }
+}
+
+footer.site-footer {
+  margin-top: 160px;
+}
+
+.footer-title {
+  max-width: var(--width-max-content);
+  padding: 0 var(--padding-s);
+  margin-bottom: 160px;
+}
+
+.footer-title-display {
+  font-family: var(--font-playfair);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-title {
+    padding: 0 var(--padding-l);
+  }
+  .footer-title-display {
+    font-size: 48px;
+    line-height: 64px;
   }
 }
