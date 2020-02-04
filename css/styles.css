@@ -197,6 +197,7 @@ nav.main-nav {
   left: 0;
   height: 96px;
   width: 100vw;
+  z-index: 1;
 }
 
 nav a.logo svg {
@@ -212,6 +213,8 @@ ul.nav-links {
   margin: 0;
   list-style: none;
   padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 ul li.nav-link {
@@ -254,6 +257,20 @@ ul li.nav-link a:hover::after {
 
 ul li.nav-link a:hover {
   color: var(--color-coralessence);
+}
+
+ul li.nav-link a.button {
+  color: #fff;
+  display: inline-flex;
+  font-family: var(--font-lato);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration: none;
+}
+
+ul li.nav-link a.button:after {
+  display: none;
 }
 
 ul li.nav-link form {
