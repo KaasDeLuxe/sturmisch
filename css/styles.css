@@ -193,6 +193,14 @@ ul li.nav-link a:hover {
   color: var(--color-coralessence);
 }
 
+ul li.nav-link a.button {
+  color: #fff;
+}
+
+ul li.nav-link a.button:after {
+  display: none;
+}
+
 ul li.nav-link form {
   display: inline;
 }
