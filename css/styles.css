@@ -197,6 +197,7 @@ nav.main-nav {
   left: 0;
   height: 96px;
   width: 100vw;
+  z-index: 1;
 }
 
 nav a.logo svg {
