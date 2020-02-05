@@ -59,6 +59,12 @@ body {
   color: var(--color-pirate-black);
 }
 
+h1,
+h2,
+h3 {
+  color: var(--color-pirate-black);
+}
+
 h1 {
   font-family: var(--font-playfair);
   font-style: normal;
@@ -203,7 +209,6 @@ ul li.nav-link a.button {
   font-size: 16px;
   line-height: 32px;
   text-decoration: none;
-
 }
 
 ul li.nav-link a.button:after {
