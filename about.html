@@ -2,6 +2,20 @@
 
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-M79LL7Z");
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
 
     <title>
@@ -13,12 +27,23 @@
     />
     <meta name="author" content="Martijn van der Wardt" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-M79LL7Z"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <nav class="main-nav">
-      <a href="../" class="logo">
+      <a href="index.html" class="logo">
         <svg
           width="64"
           height="40"
@@ -34,27 +59,76 @@
       </a>
       <ul class="nav-links">
         <li class="nav-link">
-          <a href="index.html#work">Work</a>
+          <a href="../index.html#work">Work</a>
         </li>
-        <li class="nav-link">
+        <!--<li class="nav-link">
           <a href="about.html">About</a>
-        </li>
-        <li class="nav-link">
-          <form action="mailto:martijn@sturmisch.nl" method="GET">
-            <button type="submit">Contact</button>
-          </form>
+        </li>-->
+        <li class="nav-link nav-mailto">
+          <a href="mailto:martijn@sturmisch.nl" class="button button-blue"
+            >Contact</a
+          >
         </li>
       </ul>
     </nav>
 
-    <header class="hero">
-      <section class="hero-content">
+    <header class="hero hero-about">
+      <section class="hero-content hero-about-content">
         <h1>
-          About me
+          Hey there!
         </h1>
+        <p>
+          My name is Martijn. I’m an experienced digital product designer
+          committed to solving complex problems with smart solutions. By
+          combining design thinking and business strategy I create unbiased,
+          engaging experiences that help audiences overcome obstacles and reach
+          their goals.
+        </p>
       </section>
     </header>
 
-    <script src="js/scripts.js"></script>
+    <main id="about" class="about">
+      <section class="bio"></section>
+    </main>
+
+    <aside class="background">
+      <section class="extra-info">
+        <h2 class="section-header">A Little Background</h2>
+      </section>
+    </aside>
+
+    <footer class="site-footer">
+      <section class="footer-title">
+        <p class="footer-title-display">
+          I like a good cup of coffee. Want to discuss your project? Need an
+          artisanal piece of furniture made? Want to go for a run?
+        </p>
+        <div class="button-group">
+          <a href="mailto:martijn@sturmisch.nl" class="button button-blue"
+            >Contact</a
+          >
+        </div>
+      </section>
+
+      <section class="footer-links">
+        <div class="copyright-container">
+          <p>&copy; Martijn van der Wardt</p>
+        </div>
+        <div>
+          <ul class="nav-links">
+            <li class="nav-link">
+              <a href="https://www.linkedin.com/in/martijnvdwardt/">Linkedin</a>
+            </li>
+            <li class="nav-link">
+              <a href="https://www.strava.com/athletes/552506">Strava</a>
+            </li>
+          </ul>
+          <p>
+            martijn@sturmisch.nl<br />
+            Laren, The Netherlands
+          </p>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
