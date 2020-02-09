@@ -409,14 +409,14 @@ p.hero-current {
 
 /* Main */
 
-main.work {
+main {
   margin: 16px auto 0 auto;
   padding-top: 80px;
   display: flex;
   justify-content: center;
 }
 
-main.work section.cases {
+main section.cases, main section.bio {
   max-width: var(--width-max-content);
   padding: 0 var(--padding-s);
   margin-top: 120px;
@@ -499,11 +499,11 @@ article.case section.click-here {
 }
 
 @media screen and (min-width: 768px) {
-  main.work {
+  main {
     padding-top: 80px;
     margin-top: 80px;
   }
-  main.work section.cases {
+  main section.cases, main section.bio {
     padding: 0 var(--padding-l);
   }
 
@@ -519,7 +519,7 @@ article.case section.click-here {
 }
 
 @media screen and (min-width: 1080px) {
-  main.work {
+  main {
     padding-top: 160px;
     margin-top: 240px;
   }
