@@ -519,7 +519,7 @@ article.case section.click-here {
 
 /* Aside Extra Work */
 
-aside.other-work {
+aside {
   background: var(--color-classic-blue);
   padding: 120px 0;
   margin-top: 160px;
@@ -528,16 +528,16 @@ aside.other-work {
   justify-content: center;
 }
 
-section.extra-mentions {
+section {
   max-width: var(--width-max-content);
   padding: 0 var(--padding-s);
 }
 
-aside.other-work h2.section-header {
+aside h2.section-header {
   color: #fff;
 }
 
-aside.other-workh2.section-header::after {
+aside h2.section-header::after {
   background: var(--color-cashmere-blue);
 }
 
