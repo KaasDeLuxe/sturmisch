@@ -98,6 +98,14 @@ h2.section-header::after {
   left: 0;
 }
 
+p {
+  font-family: var(--font-lato);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 40px;
+}
+
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 40px;
