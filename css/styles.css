@@ -527,10 +527,10 @@ article.case section.click-here {
 /* Aside Extra Work */
 
 aside {
-  background: var(--color-royal-blue);
+  background: var(--color-eucalyptus);
   padding: 120px 0;
   margin-top: 160px;
-  color: var(--color-roman-silver);
+  color: var(--color-outer-space);
   display: flex;
   justify-content: center;
 }
