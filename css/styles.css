@@ -472,7 +472,7 @@ article.case section.click-here {
 
 .article-anchor {
   text-decoration: none;
-  color: initial;
+  color: var(--color-outer-space);
 }
 .article-anchor:hover .click-here {
   color: var(--color-dogwood-rose);
