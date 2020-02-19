@@ -3,13 +3,12 @@
 
 :root {
   /* Colors */
-  --color-classic-blue: #0f4c81;
-  --color-pirate-black: #363838;
-  --color-coralessence: #f26b5b;
-  --color-coconut-milk: #f0ede5;
-  --color-lime-punch: #c0d725;
-  --color-cashmere-blue: #a5b8d0;
-  --color-monument: #84898c;
+  --color-royal-blue: #4F5EE9;
+  --color-outer-space: #3E4E50;
+  --color-dogwood-rose: #D81E5B;
+  --color-nyanza: #E0F9D0;
+  --color-eucalyptus: #3AF6B0;
+  --color-roman-silver: #848E8F;
 
   /* Fonts */
   --font-lato: "Lato", sans-serif;
@@ -56,13 +55,13 @@ html {
 body {
   margin: 0;
   font-family: var(--font-lato);
-  color: var(--color-pirate-black);
+  color: var(--color-outer-space);
 }
 
 h1,
 h2,
 h3 {
-  color: var(--color-pirate-black);
+  color: var(--color-outer-space);
 }
 
 h1 {
@@ -80,7 +79,7 @@ h2.section-header {
   font-weight: normal;
   font-size: 10px;
   line-height: 16px;
-  color: var(--color-pirate-black);
+  color: var(--color-outer-space);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding-left: calc(24px + 16px);
@@ -92,7 +91,7 @@ h2.section-header::after {
   content: "";
   position: absolute;
   height: 1px;
-  background: var(--color-monument);
+  background: var(--color-roman-silver);
   width: 24px;
   bottom: 50%;
   left: 0;
@@ -184,7 +183,7 @@ ul li.nav-link a {
   font-size: 16px;
   line-height: 32px;
   display: inline-block;
-  color: var(--color-classic-blue);
+  color: var(--color-royal-blue);
   position: relative;
 }
 
@@ -193,7 +192,7 @@ ul li.nav-link a::after {
   content: "";
   position: absolute;
   height: 2px;
-  background: var(--color-coralessence);
+  background: var(--color-dogwood-rose);
   width: 100%;
   bottom: 0;
   left: 0;
@@ -206,7 +205,7 @@ ul li.nav-link a:hover::after {
 }
 
 ul li.nav-link a:hover {
-  color: var(--color-coralessence);
+  color: var(--color-dogwood-rose);
 }
 
 ul li.nav-link a.button {
@@ -262,26 +261,26 @@ ul li.nav-link.nav-mailto {
 }
 
 .button-blue {
-  background: var(--color-classic-blue);
-  border-color: var(--color-classic-blue);
+  background: var(--color-royal-blue);
+  border-color: var(--color-royal-blue);
   color: #fff;
 }
 .button-white {
   background: #fff;
   border-color: #fff;
-  color: var(--color-classic-blue);
+  color: var(--color-royal-blue);
 }
 .button-blue:hover,
 .button-white:hover {
-  background: var(--color-coralessence);
-  border-color: var(--color-coralessence);
+  background: var(--color-dogwood-rose);
+  border-color: var(--color-dogwood-rose);
   color: #fff;
 }
 
 .button-blue-outline {
   background: transparent;
-  border-color: var(--color-classic-blue);
-  color: var(--color-classic-blue);
+  border-color: var(--color-royal-blue);
+  color: var(--color-royal-blue);
 }
 .button-white-outline {
   background: transparent;
@@ -291,8 +290,8 @@ ul li.nav-link.nav-mailto {
 .button-blue-outline:hover,
 .button-white-outline:hover {
   background: transparent;
-  border-color: var(--color-coralessence);
-  color: var(--color-coralessence);
+  border-color: var(--color-dogwood-rose);
+  color: var(--color-dogwood-rose);
 }
 
 .button-group .button {
@@ -328,7 +327,7 @@ header section.hero-content {
 
 header section.hero-content p.hero-hi {
   font-family: var(--font-playfair);
-  color: var(--color-coralessence);
+  color: var(--color-dogwood-rose);
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -336,7 +335,7 @@ header section.hero-content p.hero-hi {
 }
 
 a.hero-hi-link {
-  color: var(--color-coralessence);
+  color: var(--color-dogwood-rose);
   font-weight: 700;
   text-decoration: none;
   display: inline-block;
@@ -345,12 +344,12 @@ a.hero-hi-link {
 
 section.hero-content h1 {
   margin-top: 0;
-  color: var(--color-classic-blue);
+  color: var(--color-royal-blue);
 }
 
 p.hero-current {
   font-family: var(--font-lato);
-  color: var(--color-coralessence);
+  color: var(--color-dogwood-rose);
   font-style: italic;
   font-weight: 400;
   font-size: 12px;
@@ -457,7 +456,7 @@ article.case header h3 {
   line-height: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-monument);
+  color: var(--color-roman-silver);
 }
 
 article.case section.click-here {
@@ -476,7 +475,7 @@ article.case section.click-here {
   color: initial;
 }
 .article-anchor:hover .click-here {
-  color: var(--color-coralessence);
+  color: var(--color-dogwood-rose);
 }
 .click-here svg {
   transition: transform 0.2s;
@@ -485,7 +484,7 @@ article.case section.click-here {
   transform: translateX(8px);
 }
 .article-anchor:hover .click-here svg path {
-  stroke: var(--color-coralessence);
+  stroke: var(--color-dogwood-rose);
 }
 
 .click-here span {
@@ -495,7 +494,7 @@ article.case section.click-here {
 .click-here span.coming-soon {
   margin-right: 0;
   font-style: italic;
-  color: var(--color-monument);
+  color: var(--color-roman-silver);
 }
 
 @media screen and (min-width: 768px) {
@@ -528,10 +527,10 @@ article.case section.click-here {
 /* Aside Extra Work */
 
 aside {
-  background: var(--color-classic-blue);
+  background: var(--color-royal-blue);
   padding: 120px 0;
   margin-top: 160px;
-  color: var(--color-cashmere-blue);
+  color: var(--color-roman-silver);
   display: flex;
   justify-content: center;
 }
@@ -546,7 +545,7 @@ aside h2.section-header {
 }
 
 aside h2.section-header::after {
-  background: var(--color-cashmere-blue);
+  background: var(--color-roman-silver);
 }
 
 section.extra-mentions-articles {
@@ -619,7 +618,7 @@ footer.site-footer {
 .footer-links {
   display: flex;
   justify-content: space-between;
-  color: var(--color-cashmere-blue);
+  color: var(--color-roman-silver);
   font-family: var(--font-lato);
   font-style: normal;
   font-weight: 300;
