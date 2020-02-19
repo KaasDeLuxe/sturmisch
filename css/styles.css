@@ -541,7 +541,7 @@ section {
 }
 
 aside h2.section-header {
-  color: #fff;
+  color: var(--color-outer-space);
 }
 
 aside h2.section-header::after {
@@ -623,6 +623,11 @@ footer.site-footer {
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
+  line-height: 24px;
+}
+
+footer p {
+  font-size: 14px;
   line-height: 24px;
 }
 
