@@ -532,6 +532,10 @@ aside h2.section-header::after {
   background-color: rgba(256,256,256,0.4);
 }
 
+section.extra-mentions {
+  padding: 0 var(--padding-s);
+}
+
 section.extra-mentions-articles {
   display: block;
 }
