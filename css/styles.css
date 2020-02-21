@@ -517,10 +517,10 @@ article.case div.click-here {
 /* Aside Extra Work */
 
 aside {
-  background: var(--color-pale-turquoise);
+  background: var(--color-dark-purple);
   padding: 120px 0;
   margin-top: 160px;
-  color: var(--color-dark-purple);
+  color: white;
   display: flex;
   justify-content: center;
 }
@@ -531,11 +531,11 @@ section {
 }
 
 aside h2.section-header {
-  color: var(--color-dark-purple);
+  color: white;
 }
 
 aside h2.section-header::after {
-  color: var(--color-dark-purple);
+  background-color: rgba(256,256,256,0.4);
 }
 
 section.extra-mentions-articles {
@@ -545,6 +545,7 @@ section.extra-mentions-articles {
 section.extra-mentions-articles h3 {
   font-family: var(--font-quicksand);
   font-style: normal;
+  color: rgba(256,256,256,0.4);
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
