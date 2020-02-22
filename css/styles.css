@@ -10,6 +10,7 @@
   --font-quicksand: "Quicksand", sans-serif;
 
   /* Widths */
+  --width-max-body: 920px;
   --width-max-content: 1040px;
   --width-max-header: 1280px;
 
