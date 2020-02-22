@@ -488,6 +488,7 @@ article.case div.click-here {
 
 .click-here span {
   margin-right: 8px;
+  color: var(--color-cedar-chest);
 }
 
 .click-here span.coming-soon {
