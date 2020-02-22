@@ -9,11 +9,28 @@ img {
 .portal-home  {
   transform: rotate(-4deg);
   width: 100%;
-  margin-top: 80px;
+  margin: 80px 0;
 }
 
 main {
   justify-content: flex-start;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--color-cedar-chest); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+li {
+  margin: 24px 0;
 }
 
 main section.case {
