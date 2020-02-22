@@ -355,6 +355,10 @@ p.hero-current {
   margin-bottom: 40px;
 }
 
+section.hero-image-container {
+    margin-left: 80px;
+}
+
 .hero-image {
   display: none;
 }
