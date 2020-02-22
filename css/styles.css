@@ -315,6 +315,7 @@ header.hero {
   padding: 0 var(--padding-s);
   margin-top: 96px;
   align-items: center;
+  height: calc(100vh - 96px);
 }
 
 header section.hero-content {
