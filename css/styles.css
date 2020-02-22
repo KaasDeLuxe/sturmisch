@@ -294,6 +294,7 @@ ul li.nav-link.nav-mailto {
 
 .button-group .button {
   margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 .button-group .button:last-child {
@@ -316,6 +317,7 @@ header.hero {
   margin-top: 96px;
   align-items: center;
   height: calc(100vh - 96px);
+  min-height: 640px;
 }
 
 header section.hero-content {
