@@ -2,7 +2,7 @@ body {
   overflow: hidden;
 }
 
-p.emphasize {
+.emphasize {
   color: var(--color-cedar-chest);
   font-style: italic;
   font-weight: 500;
@@ -22,7 +22,7 @@ figcaption {
   text-align: center;
 }
 
-.portal-home  {
+.portal-home, .polertiek-header  {
   width: 80%;
   margin: 80px auto;
   max-height: 960px;
@@ -30,7 +30,12 @@ figcaption {
   object-position: 50% 0;
 }
 
-.second-release, .mockup {
+.app-store {
+  width:50%;
+  margin: 80px auto;
+}
+
+.second-release, .mockup, .broccerlie {
   display: grid;
   grid-column-gap: 40px;
   grid-template-areas:
@@ -45,7 +50,7 @@ figcaption {
                       "caption caption caption";
 }
 
-.design-sprint {
+.design-sprint, .whiteboard {
   display: grid;
   grid-template-areas:
                       "a b"
@@ -62,6 +67,21 @@ figcaption {
                       "d d";
 }
 
+
+.polertiek-showcase {
+  display: grid;
+  grid-column-gap: 40px;
+  align-items: center;
+  grid-template-areas:
+                      "a b"
+                      "c d"
+                      "e f"
+}
+
+.polertiek-showcase img {
+  margin-bottom: 40px;
+}
+
 @media screen and (min-width: 768px) {
   .second-release {
     display: grid;
@@ -73,7 +93,7 @@ figcaption {
 }
 
 @media screen and (min-width: 1240px) {
-  .portal-home  {
+  .portal-home, .polertiek-header  {
     transform: rotate(-4deg);
     width: 26vw;
     position: absolute;
@@ -83,17 +103,31 @@ figcaption {
   }
 }
 
+@media screen and (min-width: 1320px) {
+  .app-store {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 26vw;
+  }
+}
+
 main {
   justify-content: flex-start;
   flex-direction: column;
   position: relative;
 }
 
+ul {
+  list-style: none;
+}
+
+
 ul.list {
   list-style: none; /* Remove default bullets */
 }
 
-ul.list li {
+ul.list li, ul.list-no-style li {
   margin: 24px 0;
 }
 
@@ -103,7 +137,20 @@ ul.list li::before {
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
+  margin-left: -24px;
+}
+
+ul.challenges {
+  padding: 40px 40px 40px 64px;
+  background: #F7F5F7;
+  border-radius: 8px;
+}
+
+ul.challenges li {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
 }
 
 main section.case {
