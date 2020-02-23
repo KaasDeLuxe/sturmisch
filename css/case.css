@@ -25,11 +25,17 @@ figcaption {
 }
 
 .second-release {
-  display: grid;
-  grid-column-gap: 40px;
-  grid-template-areas:
-                      "a b"
-                      "c c";
+
+}
+
+@media screen and (min-width: 768px) {
+  .second-release {
+    display: grid;
+    grid-column-gap: 40px;
+    grid-template-areas:
+                        "a b"
+                        "c c";
+  }
 }
 
 @media screen and (min-width: 1240px) {
