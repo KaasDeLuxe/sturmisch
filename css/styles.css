@@ -131,6 +131,14 @@ p, li {
   }
 }
 
+a {
+  color: var(--color-cedar-chest);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 figure {
   margin: 0;
 }
@@ -323,6 +331,20 @@ header.hero {
   min-height: 640px;
 }
 
+header.hero-bio {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: var(--width-max-header);
+  margin: 0 auto;
+  padding: 0 var(--padding-s);
+  margin-top: 96px;
+  align-items: center;
+  height: calc(100vh - 96px);
+  min-height: 640px;
+}
+
 header section.hero-content {
   width: 100%;
   margin-top: 80px;
@@ -365,8 +387,21 @@ section.hero-image-container {
     margin-left: 80px;
 }
 
+section.bio-image-container {
+    display: flex;
+    justify-content: center;
+}
+
 .hero-image {
   display: none;
+}
+
+.bio-image {
+  display: block;
+  width: 40%;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 @media screen and (min-width: 768px) {
@@ -376,6 +411,25 @@ section.hero-image-container {
     padding: 0 var(--padding-l);
     margin-top: 0;
   }
+  header.hero-bio {
+    height: calc(100vh - 40px);
+    min-height: 920px;
+    padding: 0 var(--padding-l);
+    margin-top: 0;
+    flex-direction: row;
+  }
+  section.bio-image-container {
+      margin-left: 80px;
+  }
+
+  .bio-image {
+    display: block;
+    width: 100%;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
   header section.hero-content p.hero-hi {
     font-size: 20px;
     line-height: 24px;
@@ -399,7 +453,7 @@ section.hero-image-container {
     line-height: 24px;
     margin-bottom: 40px;
   }
-  .hero-image {
+  .hero-image, .bio-image {
     display: block;
     width: 100%;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.25);
@@ -416,12 +470,21 @@ main {
   justify-content: center;
 }
 
-main section.cases, main section.bio {
+main section.cases {
   max-width: var(--width-max-content);
   padding: 0 var(--padding-s);
   margin-top: 120px;
   display: grid;
   grid-row-gap: 120px;
+}
+
+section.bio {
+  max-width: var(--width-max-content);
+  padding: 0 var(--padding-s);
+}
+
+main.about {
+  margin-top: 120px;
 }
 
 article.case {
@@ -502,8 +565,12 @@ article.case div.click-here {
 }
 
 @media screen and (min-width: 768px) {
-  main section.cases, main section.bio {
+  main section.cases, section.bio {
     padding: 0 var(--padding-l);
+  }
+
+  main.about {
+    margin-top: 208px;
   }
 
   article.case {
