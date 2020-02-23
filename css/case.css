@@ -4,26 +4,49 @@ body {
 
 img {
   box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+
+figure {
+  margin: 80px auto;
+}
+
+figcaption {
+  margin-top: 8px;
+  text-align: center;
 }
 
 .portal-home  {
-  transform: rotate(-4deg);
-  width: 100%;
-  margin: 80px 0;
+  width: 80%;
+  margin: 80px auto;
+  max-height: 960px;
+  object-fit: cover;
+  object-position: 50% 0;
 }
 
-@media screen and (min-width: 1024px) {
+.second-release {
+  display: grid;
+  grid-column-gap: 40px;
+  grid-template-areas:
+                      "a b"
+                      "c c";
+}
+
+@media screen and (min-width: 1240px) {
   .portal-home  {
     transform: rotate(-4deg);
-    width: 40%;
+    width: 26vw;
     position: absolute;
-    right: 0;
+    right: -80px;
     top: 120px;
+    max-height: 1600px;
   }
 }
 
 main {
   justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
 }
 
 ul.list {
