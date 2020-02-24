@@ -528,7 +528,7 @@ article.case header h3 {
   opacity: 0.4;
 }
 
-div.click-here {
+.click-here {
   font-family: var(--font-quicksand);
   font-style: normal;
   font-weight: bold;
