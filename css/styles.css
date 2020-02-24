@@ -482,7 +482,7 @@ main section.cases {
   grid-row-gap: 120px;
 }
 
-section.bio {
+.bio {
   max-width: var(--width-max-content);
   padding: 0 var(--padding-s);
 }
@@ -490,6 +490,8 @@ section.bio {
 main.about {
   margin-top: 120px;
 }
+
+
 
 article.case {
   display: grid;
@@ -569,7 +571,7 @@ article.case header h3 {
 }
 
 @media screen and (min-width: 768px) {
-  main section.cases, section.bio {
+  main section.cases, .bio {
     padding: 0 var(--padding-l);
   }
 
